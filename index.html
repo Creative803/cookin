@@ -8,7 +8,7 @@
     <button onclick="play()" style="position: absolute;left: 50%;">PLAY!</button>
   </div>
   <div id="opts">
-    <select>
+    <select id="foo">
       <option value="icecream">Ice cream</option>
       <option value="pizza">Pizza</option>
       <option value="burger">Burger</option>
@@ -26,10 +26,11 @@
     document.getElementById("opts").style.display=null;
   }
   function  go()  {
-    var o = opts.value;
+    var o = document.getElementById("foo").value;
     if  (o=="icecream") {
       alert("You chose Ice cream!")
     }
+    
   }
 </script>
 <style>
