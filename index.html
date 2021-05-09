@@ -62,39 +62,24 @@
   font-size: 150%;
 }
 
-body {
-  background-color: #333;
-}
-
 @glass: rgba(135, 164, 196, 0.5);
 
-.centered() {
-  margin: auto;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  top: 0;
-  right: 0;
-}
 
 .bowl {
   display: block;
-  .centered();
   width: 8rem;
   height: 3rem;
   background: #f3f3f3;
   border-radius: .2rem .2rem 3rem  3rem;
   border-bottom: 0.3rem solid #ccc;
   z-index: 0;
-  // colorful stripe
-  &:after {
-    content: '';
-    background: #E52372;
-    display: block;
-    position: absolute;
-    width: inherit;
-    height: 0.3rem;
-    top: 0.2rem;
+  content: '';
+  background: #E52372;
+  display: block;
+  position: absolute;
+  width: inherit;
+  height: 0.3rem;
+  top: 0.2rem;
   }
 }
 </style>
