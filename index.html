@@ -17,19 +17,25 @@
     </select>
     <button onclick="go()">GO</button>
   </div>
+  <div id="icemake">
+    <div class="bowl"></div>
+  </div>
 </body>
 <script>
   document.getElementById("opts").style.display="none";
   document.getElementById("home").style.display=null;
+  document.getElementById("icemake").style.display="none";
   function play()  {
     document.getElementById("home").style.display="none";
     document.getElementById("opts").style.display=null;
+    document.getElementById("icemake").style.display="none";
   }
   function  go()  {
     var o = document.getElementById("foo").value;
     if (o=="icecream") {
       alert("You chose Ice cream!")
       document.getElementById("opts").style.display="none";
+      document.getElementById("icemake").style.display=null;
     }
     if (o=="pizza")  {
       alert("You chose pizza!")
@@ -50,5 +56,46 @@
   }
 </script>
 <style>
+* {
+  margin: 0 auto;
+  -webkit-user-select: none;
+  font-size: 150%;
+}
+
+body {
+  background-color: #333;
+}
+
+@glass: rgba(135, 164, 196, 0.5);
+
+.centered() {
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+
+.bowl {
+  display: block;
+  .centered();
+  width: 8rem;
+  height: 3rem;
+  background: #f3f3f3;
+  border-radius: .2rem .2rem 3rem  3rem;
+  border-bottom: 0.3rem solid #ccc;
+  z-index: 0;
+  // colorful stripe
+  &:after {
+    content: '';
+    background: #E52372;
+    display: block;
+    position: absolute;
+    width: inherit;
+    height: 0.3rem;
+    top: 0.2rem;
+  }
+}
 </style>
 </html>
