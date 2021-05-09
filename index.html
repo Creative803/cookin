@@ -7,23 +7,27 @@
     <h1 style="text-align: center;color: red;">Cooking game</h1>
     <button onclick="play()" style="position: absolute;left: 50%;">PLAY!</button>
   </div>
+  <div id="opts">
+    <select>
+      <option onclick="icecream()">Ice cream</option>
+      <option onclick="pizza()">Pizza</option>
+      <option onclick="burger()">Burger</option>
+      <option onclick="fries()">French Fries</option>
+      <option onclick="biriyani()">Chicken biriyani</option>
+    </select>
+  </div>
 </body>
 <script>
+  document.getElementById("opts").style.display="none";
   document.getElementById("home").style.display=null;
   function play()  {
     document.getElementById("home").style.display="none";
-    function c();
-  }
-  function c()  {
-    body.classList.add("p");
+    document.getElementById("opts").style.display=null;
   }
 </script>
 <style>
   .p  {
     background-color: red;
-  }
-  body  {
-    
   }
 </style>
 </html>
