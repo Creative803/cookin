@@ -3,11 +3,16 @@
   <title>Cooking game</title>
 </head>
 <body style="background-color: white;">
-  <h1 style="text-align: center;color: red;">Cooking game</h1>
-  <button onclick="play()">PLAY!</button>
+  <div id="home">
+    <h1 style="text-align: center;color: red;">Cooking game</h1>
+    <button onclick="play()" style="position: absolute;left: 50%;">PLAY!</button>
+  </div>
 </body>
 <script>
-  .
+  document.getElementById("home").style.display=null;
+  function play()  {
+    document.getElementById("home").style.display="none";
+  }
 </script>
 <style>
   .
