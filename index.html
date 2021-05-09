@@ -9,12 +9,13 @@
   </div>
   <div id="opts">
     <select>
-      <option onclick="icecream()">Ice cream</option>
-      <option onclick="pizza()">Pizza</option>
-      <option onclick="burger()">Burger</option>
-      <option onclick="fries()">French Fries</option>
-      <option onclick="biriyani()">Chicken biriyani</option>
+      <option value="icecream">Ice cream</option>
+      <option value="pizza">Pizza</option>
+      <option value="burger">Burger</option>
+      <option value="fries">French Fries</option>
+      <option value="biriyani">Chicken biriyani</option>
     </select>
+    <button onclick="go()">GO</button>
   </div>
 </body>
 <script>
@@ -23,6 +24,11 @@
   function play()  {
     document.getElementById("home").style.display="none";
     document.getElementById("opts").style.display=null;
+  }
+  function  go()  {
+    if  (opts=="icecream") {
+      alert("You chose Ice cream!")
+    }
   }
 </script>
 <style>
