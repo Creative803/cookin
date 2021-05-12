@@ -1,72 +1,11 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <title>Cooking game</title>
+   <title> Try It Yourself </title>
 </head>
-<body style="text-align: centre;">
-  <div id="home">
-    <h1 style="text-align: center;color: red;">Cooking game</h1>
-    <button onclick="play()" style="position: absolute;left: 50%;">PLAY!</button>
-  </div>
-  <div id="opts">
-    <select id="foo">
-      <option value="icecream">Ice cream</option>
-      <option value="pizza">Pizza</option>
-      <option value="burger">Burger</option>
-      <option value="fries">French Fries</option>
-      <option value="biriyani">Chicken biriyani</option>
-    </select>
-    <button onclick="go()">GO</button>
-  </div>
-  <div id="icemake">
-    <div class="bowl"></div>
-  </div>
+<body>
+   <!-- simple embedding that removes the iframe's border -->
+   <iframe width="560" height="315"
+   src="https://youtu.be/yHioWLdgnMI" frameborder="0"></iframe>
 </body>
-<script>
-  document.getElementById("opts").style.display="none";
-  document.getElementById("home").style.display=null;
-  document.getElementById("icemake").style.display="none";
-  function play()  {
-    document.getElementById("home").style.display="none";
-    document.getElementById("opts").style.display=null;
-    document.getElementById("icemake").style.display="none";
-  }
-  function  go()  {
-    var o = document.getElementById("foo").value;
-    if (o=="icecream") {
-      alert("You chose Ice cream!")
-      document.getElementById("opts").style.display="none";
-      document.getElementById("icemake").style.display=null;
-    }
-    if (o=="pizza")  {
-      alert("You chose pizza!")
-      document.getElementById("opts").style.display="none";
-    }
-    if (o=="burger")  {
-      alert("You chose burger!")
-      document.getElementById("opts").style.display="none";
-    }
-    if (o=="fries")  {
-      alert("You chose fries!")
-      document.getElementById("opts").style.display="none";
-    }
-    if (o=="biriyani")  {
-      alert("You chose biriyani!")
-      document.getElementById("opts").style.display="none";
-    }
-  }
-</script>
-<style>
-  .bowl {
-    float: left;
-    width: 200px;
-    height: 200px;
-    margin: 20px;
-    clip-path: circle(50% at 0%);
-    background: lightblue;
-    transform: rotate(90deg);
-    position: absolute;
-    left: 400px;
-    top: 300px;
-  }
-</style>
 </html>
